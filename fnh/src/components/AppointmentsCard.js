@@ -19,7 +19,7 @@ const AppointmentsCard = () => {
   }, []);
 
   const fetchAppointments = async () => {
-    const res = await fetch("https://jwf0b50k-5000.inc1.devtunnels.ms/appointments");
+    const res = await fetch("/appointments");
     const result = await res.json();
     console.log(result);
   };

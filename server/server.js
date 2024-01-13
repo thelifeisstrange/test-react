@@ -16,6 +16,12 @@ const db = mysql.createPool({
     database : "faith"
 })
 
+// serve build folder as static
+app.use(express.static("build"));
+app.get("/", (req, res) => {
+	res.sendFile("index.html");
+});
+
 app.get("/admin", (req,res) => {
     const sql = "SELECT * FROM appountments";
     db.query(sql, (err, data) => {
