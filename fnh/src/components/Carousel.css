@@ -1,0 +1,10 @@
+.text-content {
+    marginTop: 40px;
+    marginLeft: 20vw;
+  
+    @media (max-width: 768px) {
+      text-align: center;
+      margin: auto;
+    }
+  }
+  

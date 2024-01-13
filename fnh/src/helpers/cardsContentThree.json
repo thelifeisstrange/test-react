@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "title": "Physiotherapy Services",
+      "subtitle": "Physiotherapy",
+      "description": [
+        "1. Paralysis",
+        "Physiotherapy is instrumental in treating paralysis by focusing on enhancing mobility, strength, and functionality. Tailored exercises aim to stimulate muscles, preventing atrophy and maintaining joint flexibility. Therapists work on gait training, helping individuals regain the ability to walk or improve their existing walking pattern. Additionally, physiotherapy aids in promoting independence through activities of daily living, adapting to assistive devices, and addressing specific muscle imbalances. Rehabilitation programs are personalized to the type and extent of paralysis, aiming to maximize functional recovery and improve overall quality of life.",
+        "2. Parkinson’s Disease",
+        "Physiotherapy plays a crucial role in managing Parkinson's disease by addressing mobility issues and improving overall functional abilities. Tailored exercise programs can enhance flexibility, strength, and balance, reducing the impact of symptoms. Additionally, physiotherapy helps in maintaining range of motion, preventing contractures, and improving posture. Targeted exercises also focus on promoting coordination and reducing muscle stiffness. The overall goal is to enhance mobility, independence, and quality of life for individuals with Parkinson's disease."
+      ],
+      "customImageFileName": "physio_image"
+    },
+    
+      {
+        "id": 2,
+        "title": "Physiotherapy and Wellness Zone",
+        "subtitle": "Physiotherapy",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "customImageFileName": "physio_image"
+      },
+      {
+        "id": 3,
+        "title": "Physiotherapy and Wellness Zone",
+        "subtitle": "Physiotherapy",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "customImageFileName": "physio_image"
+      }
+      
+    ]
+    

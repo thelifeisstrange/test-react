@@ -1,0 +1,60 @@
+[
+    {
+      "id": 1,
+      "title": "Care Takeer At Home",
+      "image": "images/care taker.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Nursing Care At Home",
+      "image": "images/nursing care.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Psychology Services",
+      "image": "images/psychology.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Gynecologist's Consultation",
+      "image": "images/gynec.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Physiotherapy Services",
+        "image": "images/physiotherapist-helping-female-patient-her-clinic.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Diet Consultation",
+        "image": "images/diet.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Ayurvedic Treatment",
+        "image": "images/ayurveda marma.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Doctor's Consultation",
+        "image": "images/doctor consultation.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Medical Equipments",
+        "image": "images/medical eqp.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Telerehabilitation",
+        "image": "images/tele rehab (1).jpg"
+    },
+    {
+        "id": 10,
+        "title": "Diagnostic Services",
+        "image": "images/diagnostic.jpg"
+    }
+    
+
+  ]
+  
