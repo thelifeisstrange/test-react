@@ -24,9 +24,6 @@ function Example() {
         color: '#1f3557',
         fontSize: '2.5rem',
         fontWeight: 'bold',
-        
-        
-        
         // textAlign: 'center',
         // Add other custom styles as needed
       };
@@ -46,8 +43,6 @@ function Example() {
         // textAlign: 'center',
         // Add other custom styles as needed
       };
-
-      
 
   return (
     <>

@@ -64,6 +64,7 @@ Our Services        </Typography>
               key={card.id}
               src={`images/${card.customImageFileName}.png`} // Use customImageFileName for dynamic image source
               label={card.subtitle}
+              
               // onClick={() => handleOpen(card)}
             />
             ))}

@@ -54,35 +54,7 @@ function HeroSection() {
             <Typography variant="h4" gutterBottom style={subheadingStyle}>
               Healthcare Services At Your Doorstep
             </Typography>
-            <div style={translucentBoxStyle}>
-              <Typography variant="body1" style={normalTextStyle}>
-              Physiotherapy
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Psychology Consultation
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Diet Consultation
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Gynecologist’s Consultation
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Ayurvedic Treatment
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Nursing Care at Home
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Care taker at Home
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Doctor’s Consultation
-              </Typography>
-              <Typography variant="body1" style={normalTextStyle}>
-              Telerehabilitation              </Typography>
-               
-            </div>
+            
             {/* ... other text elements ... */}
           </div>
         </div>

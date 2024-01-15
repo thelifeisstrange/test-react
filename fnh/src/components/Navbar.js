@@ -20,13 +20,13 @@ function Navbar() {
   const squareLogoStyle = {
     height: '100%', // Maintain aspect ratio
     marginLeft:"50px",
-    marginRight: '10px', // Adjust the margin as needed
+    marginRight: '7px', // Adjust the margin as needed
   };
  
 
   const rectangularLogoStyle = {
     height: '100%', // Maintain aspect ratio
-    marginRight: '7px', // Adjust the margin as needed
+    marginRight: '5px', // Adjust the margin as needed
   };
 
 
@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <div className='upperNavbar' style={{width:"100%", height:'5px', backgroundColor:'#1f3557'}}></div>
-      <div className='navbar-container' style={{ width: '100%', height: '70px', display:"flex", padding:"5px"}}>
+      <div className='navbar-container' style={{ width: '100%', height: '70px', display:"flex", padding:"6px 0px 6px"}}>
           <div>
             <img src={logo} alt='Faith and Health Logo' className='logo-image' style={squareLogoStyle} />
           </div>

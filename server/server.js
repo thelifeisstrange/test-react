@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(cors());
 
 const db = mysql.createPool({
-    host : "localhost",
-    user: "root",
-    password : "kulkarni",
+    host : "ls-29b37c8e6da88437a6afd34e7aa07751bed1f6dc.cnesccme20c5.ap-south-1.rds.amazonaws.com",
+    user: "suyash",
+    password : "faithandheal",
     database : "faith"
 })
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/admin", (req,res) => {
-    const sql = "SELECT * FROM appountments";
+    const sql = "SELECT * FROM appointments";
     db.query(sql, (err, data) => {
         if(err) return res.json("Error");
         return res.json(data);
@@ -50,6 +50,6 @@ app.get("/appointments", async(req,res) => {
     res.json({data: re[0][0]})
 })
 
-app.listen(5000, () => {
+app.listen(80, () => {
     console.log("Server Running On Port 5000");
 })
