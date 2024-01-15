@@ -48,7 +48,7 @@ function Example() {
     <>
     <div className='text-content' style={{marginTop:"5vh", marginLeft:"25vw"}}>
         <Typography variant="h2" gutterBottom style={headingStyle}>
-         What We Do
+         Our Vision
         </Typography>
         {/* <Typography variant="h4" gutterBottom style={subheadingStyle}>
           Healthcare Services At Your Doorstep
