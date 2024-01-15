@@ -47,7 +47,7 @@ function HeroSection() {
         <div className='overlay'></div>
         <div className='content'>
           <AppointmentsCard />
-          <div className='text-content'>
+          <div className='text-content' style={{marginLeft:"10vw"}}>
             <Typography variant="h2" gutterBottom style={headingStyle}>
               Faith And Health Physiotherapy And Wellness Zone
             </Typography>

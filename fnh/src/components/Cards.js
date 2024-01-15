@@ -80,7 +80,7 @@ Our Services        </Typography>
             ))}
           </ul>
           <ul className='cards__items'>
-            {cardsContentOne.map((card) => (
+            {cardsContentThree.map((card) => (
               <CardItem
               key={card.id}
               src={`images/${card.customImageFileName}.png`} // Use customImageFileName for dynamic image source

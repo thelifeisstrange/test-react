@@ -21,10 +21,10 @@
       },
       {
         "id": 3,
-        "title": "Physiotherapy and Wellness Zone",
-        "subtitle": "Physiotherapy",
+        "title": "Elderly Care",
+        "subtitle": "Elderly Care",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "customImageFileName": "physio_image"
+        "customImageFileName": "person"
       }
       
     ]

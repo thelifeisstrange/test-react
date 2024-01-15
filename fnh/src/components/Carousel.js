@@ -4,7 +4,7 @@ import Item from './Item';
 import slider from '../helpers/sliders.json';
 import { Button, styled, Box, Typography } from '@mui/material';
 import { NavigateBefore, NavigateNext } from '@mui/icons-material';
-import './Carousel.css';
+// import './Carousel.css';
 
 const StyledNavigateNext = styled(NavigateNext)({
   display: 'flex',
