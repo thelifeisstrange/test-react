@@ -49,7 +49,7 @@ function HeroSection() {
           <AppointmentsCard />
           <div className='text-content' style={{marginLeft:"10vw"}}>
             <Typography variant="h2" gutterBottom style={headingStyle}>
-              Faith And Health Physiotherapy And Wellness Zone
+              Faith And Heal Physiotherapy And Wellness Zone
             </Typography>
             <Typography variant="h4" gutterBottom style={subheadingStyle}>
               Healthcare Services At Your Doorstep

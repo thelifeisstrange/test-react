@@ -19,14 +19,14 @@ function Navbar() {
 
   const squareLogoStyle = {
     height: '100%', // Maintain aspect ratio
-    marginLeft:"50px",
-    marginRight: '7px', // Adjust the margin as needed
+    marginLeft:"20px",
+    marginRight: '5px', // Adjust the margin as needed
   };
  
 
   const rectangularLogoStyle = {
     height: '100%', // Maintain aspect ratio
-    marginRight: '5px', // Adjust the margin as needed
+    // marginRight: '5px', // Adjust the margin as needed
   };
 
 
@@ -47,9 +47,9 @@ function Navbar() {
             />
           </div>
         </div>
-        <div className='menu-icon' onClick={handleClick}>
+        {/* <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
+        </div> */}
         {/* <div className='upperNavbar' style={{width:"100%", height:'10px', backgroundColor:'#1f3557'}}></div> */}
     </nav>
   );

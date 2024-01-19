@@ -50,6 +50,6 @@ app.get("/appointments", async(req,res) => {
     res.json({data: re[0][0]})
 })
 
-app.listen(80, () => {
+app.listen(5000, () => {
     console.log("Server Running On Port 5000");
 })

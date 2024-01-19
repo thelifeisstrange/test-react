@@ -95,7 +95,7 @@ const AppointmentsCard = () => {
             <TextField id="phone" size="small" type="tel" label="Contact Number" variant="outlined" name="phone" onChange={handleChange} value={formData.phone} />
             <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
               <Button size="medium" variant="contained" color="primary" fullWidth onClick={handleSubmit}>
-                Start Rehabilitation
+                Start Your Rehab
               </Button>
             </Box>
           </Stack>

@@ -24,7 +24,7 @@ function Example() {
         color: '#1f3557',
         fontSize: '2.5rem',
         fontWeight: 'bold',
-        // textAlign: 'center',
+        textAlign: 'center',
         // Add other custom styles as needed
       };
       
@@ -44,9 +44,15 @@ function Example() {
         // Add other custom styles as needed
       };
 
+  //     color: #ffffff;
+  // max-width: 50%;
+  // font-weight: bold;
+  // font-size: 1.2rem;
+  // margin-left: 70px;
+  // line-height: 1.5;
   return (
     <>
-    <div className='text-content' style={{marginTop:"5vh", marginLeft:"25vw"}}>
+    <div style={{marginTop:"5dvh",marginLeft:"5%", marginRight:"5%" ,color:"#ffffff", display:"flex", flexDirection:"column" ,justifyContent:"center"}}>
         <Typography variant="h2" gutterBottom style={headingStyle}>
          Our Vision
         </Typography>
@@ -69,7 +75,7 @@ function Example() {
         <Box position="relative" style={{marginTop:"5vh"}}>
       <Carousel
         autoPlay={true}
-        interval={2000}
+        interval={1000}
         animation='fade'
         NavButton={({ onClick, className, style, next, prev }) => {
           return (

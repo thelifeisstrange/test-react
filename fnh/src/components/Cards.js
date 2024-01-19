@@ -40,20 +40,15 @@ function Cards() {
   };
   const headingStyle = {
     color: '#1f3557',
-
     fontSize: '2.5rem',
     fontWeight: 'bold',
-    
-    
-    
-    
-    textAlign: 'center',
-    // Add other custom styles as needed
+    display:"flex",
+    justifyContent:"center"
   };
 
   return (
     <div className='cards'>
-      <Typography variant="h2" gutterBottom style={headingStyle}>
+      <Typography variant="h2" style={headingStyle}>
 Our Services        </Typography>
       <div className='cards__container'>
         <div className='cards__wrapper'>
