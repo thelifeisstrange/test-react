@@ -46,6 +46,10 @@ const ServicesCard = () => {
         title: 'Medical Equipments',
       },
       {
+        image: '/imgs/diagnostic.png',
+        title: 'Medical Diagnostic Services',
+      },
+      {
         image: '/imgs/telerehab.png',
         title: 'Telerehabilitation',
       }
@@ -60,12 +64,13 @@ const ServicesCard = () => {
    
     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', alignItems: 'center', margin: '30px' }}>
       {testimonialsData.map((testimonial, index) => (
-        <Card key={index} style={{ width:"250px", flex: '0 0 auto', marginRight: '3%', marginBottom: '9%', '@media (max-width: 600px)': { width:"250px", marginRight: '10px',  marginBottom: '10px' } }}>
+        <Card key={index} style={{ width:"250px", flex: '0 0 auto', marginRight: '3%', marginBottom: '9%', backgroundColor:"#E8EEFF" ,'@media (max-width: 600px)': { width:"250px", marginRight: '10px',  marginBottom: '10px', display:"flex", justifyContent:"center" } }}>
           <CardActionArea>
             <CardMedia
               component="img"
               width='100%'
               height="100%"
+              style={{padding:"5%"}}
               image={testimonial.image}
               alt={testimonial.title}
             />

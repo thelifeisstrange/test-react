@@ -40,11 +40,11 @@ const Testimonials = () => {
   return (
     <div>
        <Typography variant="h2" gutterBottom style={headingStyle}>
-         Patient Reviews
+         Testimonials
         </Typography>
     <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'nowrap', overflowX: 'auto', alignItems: 'center', margin: '2%', whiteSpace: 'nowrap', scrollbarWidth: 'thin', scrollbarColor: '#888 #f0f0f0' }}>
       {testimonialsData.map((testimonial, index) => (
-        <Card key={index} style={{ width:"250px", height:"30%" ,flex: '0 0 auto', marginRight: '6%',textWrap:"wrap" ,'@media (max-width: 600px)': {width:"250px", height: "20dvh", marginRight: '10dvw' } }}>
+        <Card key={index} style={{ width:"250px", height:"25%" ,flex: '0 0 auto', marginRight: '6%',textWrap:"wrap" , backgroundColor:'#E8EEFF','@media (max-width: 600px)': {width:"250px", height: "215dvh", marginRight: '10dvw' } }}>
           
           <CardContent>
           

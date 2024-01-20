@@ -86,6 +86,7 @@ const AppointmentsCard = () => {
                 <MenuItem value={"Gynecologist’s Consultation"}>Gynecologist’s Consultation</MenuItem>
                 <MenuItem value={"Ayurvedic Treatment"}>Ayurvedic Treatment</MenuItem>
                 <MenuItem value={"Nursing Care at Home"}>Nursing Care at Home</MenuItem>
+                <MenuItem value={"Medical Diagnostic Services"}>Medical Diagnostic Services</MenuItem>
                 <MenuItem value={"Care taker at Home"}>Care taker at Home</MenuItem>
                 <MenuItem value={"Doctor’s Consultation"}>Doctor’s Consultation</MenuItem>
                 <MenuItem value={"Medical Equipment’s"}>Medical Equipment’s</MenuItem>
