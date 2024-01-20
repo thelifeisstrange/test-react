@@ -10,6 +10,8 @@ import Example from '../components/Carousel';
 import Cards from '../components/Cards';
 import AboutUs from '../components/AboutUs';
 import { Card } from '@mui/material';
+import Testimonials from '../components/Testimonials';
+import ServicesCard from '../components/ServicesCard';
 
 function Home() {
   return (
@@ -18,7 +20,8 @@ function Home() {
      <HeroSection />
      {/* <AppointmentsCard /> */}
      <Example />
-      <Cards />
+      <ServicesCard />
+      <Testimonials />
       <AboutUs />
      <Footer />
       

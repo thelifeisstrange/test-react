@@ -8,8 +8,7 @@ import Example from '../components/Carousel';
 const Services = () => {
   return (
     <div>
-      <Example />
-      <Cards />
+      
     </div>
   )
 }

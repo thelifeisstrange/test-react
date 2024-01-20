@@ -64,7 +64,7 @@ const AppointmentsCard = () => {
       >
         <Container maxWidth="sm"> {/* Limit width on larger screens */}
           <Typography variant="h6" color="text.primary" sx={{ marginBottom: 2, color: "#1f3557" }}>
-            Book Your Appointments Now!
+            Book Your Appointment Now!
           </Typography>
           <Stack spacing={2}>
             <TextField id="name" size="small" label="Name" variant="outlined" name="name" onChange={handleChange} value={formData.name} />
@@ -95,7 +95,7 @@ const AppointmentsCard = () => {
             <TextField id="phone" size="small" type="tel" label="Contact Number" variant="outlined" name="phone" onChange={handleChange} value={formData.phone} />
             <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
               <Button size="medium" variant="contained" color="primary" fullWidth onClick={handleSubmit}>
-                Start Your Rehab
+                Start Your Rehab Now
               </Button>
             </Box>
           </Stack>
