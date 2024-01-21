@@ -52,7 +52,7 @@ const AboutUs = () => {
 
         </Typography>
         <Typography variant="body1" style={normalTextStyle}>
-        We offer wide range of healthcare services including Physiotherapy, Psychology consultation,Diet consultation, Nursing care at home, elderly care,Tele-rehabilitation, Gynecology consultation, diagnostic services, Medical Equipments, Ayurvedic treatment, Doctor's consultation.
+        We offer wide range of healthcare services including Physiotherapy, Psychology Consultation,Diet consultation, Nursing care at home, elderly care,Tele-rehabilitation, Gynecology consultation, diagnostic services, Medical Equipments, Ayurvedic treatment, Doctor's consultation.
         </Typography>
         <Typography variant="body1" style={normalTextStyle}>
         Our aim is to deliver exceptional healthcare services at the comfort of your home.  </Typography>
