@@ -15,11 +15,11 @@ const ServicesCard = () => {
   const testimonialsData = [
     {
       image: '/imgs/physio.png',
-      title: 'Physiotherapy',
+      title: 'Physiotherapy Services',
     },
     {
         image: '/imgs/psycology.png',
-        title: 'Psycology Consultation',
+        title: 'Psychology Consultation',
       },
       {
         image: '/imgs/diet.png',
@@ -62,7 +62,7 @@ const ServicesCard = () => {
         Our Services
         </Typography>
    
-    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', alignItems: 'center', margin: '30px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', alignItems: 'center', margin:'10%' }}>
       {testimonialsData.map((testimonial, index) => (
         <Card key={index} style={{ width:"250px", flex: '0 0 auto', marginRight: '3%', marginBottom: '9%', backgroundColor:"#E8EEFF" ,'@media (max-width: 600px)': { width:"250px", marginRight: '10px',  marginBottom: '10px', display:"flex", justifyContent:"center" } }}>
           <CardActionArea>

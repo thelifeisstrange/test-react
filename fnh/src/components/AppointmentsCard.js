@@ -37,6 +37,8 @@ const AppointmentsCard = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+
+
   async function handleSubmit(event) {
     event.preventDefault();
     axios.post("http://localhost:5000/aboutus", formData)

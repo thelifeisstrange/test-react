@@ -43,21 +43,10 @@ const AboutUs = () => {
         <Typography variant="body1" style={normalTextStyle}>            
         Faith n Heal Physiotherapy and Wellness Zone is a growing startup based on Home Health Care Services in and around Pune.
         </Typography>
-
-        <Typography variant="h4" gutterBottom style={ {color: '#1f3557',
-        fontSize: '1.9rem',
-        fontWeight: 'bold',marginTop:"2dvh", display: "flex", justifyContent:"center"}}>
-        Founder and Director
+        <Typography variant="body1" style={normalTextStyle}>            
+        Founder And Director :  Dr.Suyash Vanmore (PT)
         </Typography>
-        <Typography variant="h4" gutterBottom style={{color: '#1f3557',
-        fontSize: '1.5rem',
-        fontWeight: 'bold', display: "flex", justifyContent:"center"}}>
-        Dr.Suyash Vanmore (PT)
-
-        </Typography>
-
-
-
+        
         <Typography variant="body1" style={normalTextStyle}>
         We are a digital marketplace for health care services through our healthcare providers.
 
@@ -67,9 +56,23 @@ const AboutUs = () => {
         </Typography>
         <Typography variant="body1" style={normalTextStyle}>
         Our aim is to deliver exceptional healthcare services at the comfort of your home.  </Typography>
+        
+        
+        {/* <Typography variant="h4" gutterBottom style={ {color: '#1f3557',
+        fontSize: '1.9rem',
+        fontWeight: 'bold',marginTop:"2dvh", display: "flex", justifyContent:"center"}}>
+        Founder and Director
+        </Typography>
+        <Typography variant="h4" gutterBottom style={{color: '#1f3557',
+        fontSize: '1.5rem',
+        fontWeight: 'bold', display: "flex", justifyContent:"center"}}>
+        Dr.Suyash Vanmore (PT)
+        </Typography> */}
         </div>
+        
+        
     </div>
   )
 }
 
-export default AboutUs
+export default AboutUs;
