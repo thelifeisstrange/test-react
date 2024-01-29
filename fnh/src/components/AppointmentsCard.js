@@ -48,6 +48,14 @@ const AppointmentsCard = () => {
       .catch((err) => {
         console.log(err);
       });
+      setFormData({
+        name: "",
+        age: "",
+        gender: "",
+        address: "",
+        service: "",
+        phone: "",
+      })
   }
 
   return (
