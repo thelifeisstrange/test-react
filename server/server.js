@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
+const {sendEmail} = require('./controllers/emailControllers.js')
 
 
 const app = express();
@@ -8,7 +9,6 @@ const app = express();
 app.use(express.json());
 
 app.use(cors());
-
 const db = mysql.createPool({
     host : "ls-29b37c8e6da88437a6afd34e7aa07751bed1f6dc.cnesccme20c5.ap-south-1.rds.amazonaws.com",
     user: "suyash",
@@ -39,6 +39,8 @@ app.post("/aboutus", async(req,res) => {
         name, age, gender, address, service, phone
     ]
     await db.query(sql, values)
+    const msg = `New Appointment Request \n Name : ${name} \n age : ${age} \n gender : ${gender} \n address : ${address} \n service : ${service} \n phone : ${phone} `
+    sendEmail(msg)
     res.json({data: {name, age, gender, address, service, phone}})
 })
 
