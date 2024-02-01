@@ -41,7 +41,7 @@ const AppointmentsCard = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    axios.post("http://localhost:5000/aboutus", formData)
+    axios.post("/aboutus", formData)
       .then((res) => {
         console.log(res);
       })
