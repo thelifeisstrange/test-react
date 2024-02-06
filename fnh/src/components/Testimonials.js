@@ -35,6 +35,10 @@ const Testimonials = () => {
       title: 'Mr.Harshit choudhary ',
       description: 'I want to thank Dr. Suyash for his amazing physiotherapy treatment. This guy knows his stuff and has been helping me move better and feel more in control of my body. Dr. Suyash doesn\'t just throw exercises at you; he explains everything in simple terms, making it easy for a me to understand. His encouragement and positive vibes have been source of motivation in every session. ',
     },
+    {
+    title: 'Mrs.Alka Mokashi',
+    description: 'मी आणि माझी आई आम्ही दोघेही सुयशचे पेशंट आहोत.आई चे वय ९३, माझे ७३ आहे. त्यांच्या ट्रिटमेंट मुळे आम्हाला जो अनुभव आला आहे तो खूपच समाधान देणारा असल्याने मी मुंबईत राहते तरी ट्रीटमेंट साठी पुण्यात येत असते. ते खूप व्यवस्थित ट्रीटमेंट करतात, धन्यवाद.',
+    },
   ];
 
   return (

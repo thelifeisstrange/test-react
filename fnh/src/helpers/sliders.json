@@ -53,6 +53,11 @@
         "id": 10,
         "title": "Diagnostic Services",
         "image": "images/diagnostic.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Customised Foot Insoles",
+      "image": "images/footinsoleimg.jpg"
     }
     
 
