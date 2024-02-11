@@ -47,8 +47,8 @@ app.post("/aboutus", async(req,res) => {
 app.post("/adminchange", async (req, res) => {
   try {
     const { id, name ,dateofapp, numberofapp, referralthrough, nameoftherapist , payment } = req.body;
-    const sql = "UPDATE appointments SET dateofapp=?, numberofapp=?, referralthorough=?, nameoftherapist=? ,payment=? WHERE id=?";
-    const values = [dateofapp, numberofapp, referralthrough, nameoftherapist , payment, id];
+    const sql = "UPDATE appointments SET dateofapp=?, numberofapp=?, referralthrough=?, nameoftherapist=? ,payment=? WHERE id=?";
+    const values = [dateofapp, numberofapp, referralthrough , nameoftherapist , payment, id];
 
     await db.query(sql, values);
 
