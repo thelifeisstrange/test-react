@@ -22,13 +22,13 @@ app.get("/", (req, res) => {
 	res.sendFile("index.html");
 });
 
-app.get("/admin", (req,res) => {
-    const sql = "SELECT * FROM appointments";
-    db.query(sql, (err, data) => {
-        if(err) return res.json("Error");
-        return res.json(data);
-    })
-})
+// app.get("/main", (req,res) => {
+//     const sql = "SELECT * FROM appointments";
+//     db.query(sql, (err, data) => {
+//         if(err) return res.json("Error");
+//         return res.json(data);
+//     })
+// })
 
 
 app.post("/aboutus", async(req,res) => {
@@ -44,13 +44,36 @@ app.post("/aboutus", async(req,res) => {
     res.json({data: {name, age, gender, address, service, phone}})
 })
 
+app.post("/adminchange", async (req, res) => {
+  try {
+    const { id, name ,dateofapp, numberofapp, referralthrough, nameoftherapist , payment } = req.body;
+    const sql = "UPDATE appointments SET dateofapp=?, numberofapp=?, referralthorough=?, nameoftherapist=? ,payment=? WHERE id=?";
+    const values = [dateofapp, numberofapp, referralthrough, nameoftherapist , payment, id];
 
-app.get("/appointments", async(req,res) => {
+    await db.query(sql, values);
 
-    const re = await db.query("select * from appointments");
+    const updatedAppointment = await db.query("SELECT * FROM appointments WHERE id=?", [id]);
 
-    res.json({data: re[0][0]})
-})
+    // const msg = `Appointment Updated \n Name : ${name} \n ID: ${id} \n Date of Appointment: ${dateofapp} \n Number of Appointments: ${numberofapp} \n Payment: ${payment}`;
+    // sendEmail(msg);
+
+    res.json({ data: updatedAppointment[0][0] });
+  } catch (error) {
+    console.error("Error updating appointment:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+
+app.get("/api/appointments", async (req, res) => {
+    try {
+      const result = await db.query("SELECT * FROM appointments");
+      res.json({ data: result[0] });
+    } catch (error) {
+      console.error("Error fetching appointments:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
 
 app.listen(5000, () => {
     console.log("Server Running On Port 5000");

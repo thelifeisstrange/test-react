@@ -17,6 +17,9 @@ import MedicalEquipments from './components/MedicalEquipments';
 import MedicalDiagnostics from './components/MedicalDiagnostics';
 import TelerehabPage from './components/TelerehabPage';
 import FootInsolePage from './components/FootInsolePage';
+import Login from './components/Login';
+import AppointmentsList from './components/AppointmentsList';
+// import Appointments from './components/Appointments';
 
 
 function App() {
@@ -37,8 +40,12 @@ function App() {
               <Route path='/telerehabilitation' element={<TelerehabPage />}/>  
               <Route path='/customisedfootinsoles' element={<FootInsolePage />}/>  
 
-              {/* <Route path='/main' element={<Services />}/> */}
+              <Route path='/support' element={<Login />}/>
               <Route path = "/services" element={<Services />} />
+              {/* <Route path = "/adminpage" element={<Admin />} /> */}
+              <Route path="/appointments" element={<AppointmentsList />} />
+
+
             </Routes>  
           </BrowserRouter>
   );
