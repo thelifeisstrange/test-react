@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -23,7 +22,7 @@ function Footer() {
             <div><svg width="18" height="18" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M192.734 9.60937L152.109 0.234372C147.695 -0.781253 143.164 1.52344 141.367 5.66406L122.617 49.4141C120.977 53.2422 122.07 57.7344 125.312 60.3516L148.984 79.7266C134.922 109.688 110.352 134.609 79.7656 148.945L60.3906 125.273C57.7344 122.031 53.2812 120.937 49.4531 122.578L5.70313 141.328C1.52344 143.164 -0.781248 147.695 0.234377 152.109L9.60938 192.734C10.5859 196.953 14.3359 200 18.75 200C118.789 200 200 118.945 200 18.75C200 14.375 196.992 10.5859 192.734 9.60937Z" fill="white"/>
 </svg>
-</div><div style={{color:"white", marginLeft:"2dvw"}}>91+ 7066323671</div>
+</div><div style={{color:"white", marginLeft:"2dvw"}}>7066323671</div>
             </ul>
             <ul style={{display: 'flex', marginTop:"5px"}}>
             <div><svg width="18" height="18" viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg">

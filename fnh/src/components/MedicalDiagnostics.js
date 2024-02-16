@@ -10,14 +10,6 @@ const MedicalDiagnostics = () => {
     // Add other custom styles as needed
   };
   
-  const subheadingStyle = {
-    color: '#1f3557',
-    fontSize: '1.8rem',
-    fontWeight: 'bold',
-    // textAlign: 'center',
-    // Add other custom styles as needed
-  };
-  
   const normalTextStyle = {
     color: '#1f3557',
     fontSize: '1.2rem',
@@ -26,6 +18,7 @@ const MedicalDiagnostics = () => {
     // textAlign: 'center',
     // Add other custom styles as needed
   };
+
   return (
     <div>
       <div style={{marginTop:"5dvh",marginLeft:"5%", marginRight:"5%" ,color:"#ffffff", display:"flex", flexDirection:"column" ,justifyContent:"center"}}>

@@ -1,16 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e292da5.css",
-    "main.js": "/static/js/main.d7128d53.js",
+    "main.css": "/static/css/main.ee352be3.css",
+    "main.js": "/static/js/main.7e4f5343.js",
     "static/js/787.fcba395d.chunk.js": "/static/js/787.fcba395d.chunk.js",
     "static/media/Subject.png": "/static/media/Subject.8ca7ef3e8f9b08302656.png",
+    "static/media/psychology.jpg": "/static/media/psychology.cdbfd8671497eb451cf6.jpg",
+    "static/media/Insole.png": "/static/media/Insole.841b3b9d5bb0513440f0.png",
+    "static/media/ayurvedamarmaimg.jpg": "/static/media/ayurvedamarmaimg.841e81ef18f62bfaff29.jpg",
+    "static/media/mediequipimg.jpg": "/static/media/mediequipimg.7b7e3328c78c9eb44ed5.jpg",
+    "static/media/gynec.jpg": "/static/media/gynec.04293cff01c6d16d4145.jpg",
+    "static/media/nursingcare.jpg": "/static/media/nursingcare.c54764a55e57d9c73ba3.jpg",
+    "static/media/diet.jpg": "/static/media/diet.67a136c365561c700921.jpg",
+    "static/media/elderlycare.jpg": "/static/media/elderlycare.0001a144a2dd5aca676e.jpg",
+    "static/media/tele-rehab.jpg": "/static/media/tele-rehab.fe8ffc118f918e710a68.jpg",
+    "static/media/diagnostic.jpg": "/static/media/diagnostic.ff80cdbfe7d0f8e295d7.jpg",
+    "static/media/physiotherapy.jpg": "/static/media/physiotherapy.bd1eeaa656a13cae41e2.jpg",
+    "static/media/footinsoleimg.jpg": "/static/media/footinsoleimg.2f52808e83576bbe86e9.jpg",
+    "static/media/docconsultation.jpg": "/static/media/docconsultation.52e9f9729e2b6d73637e.jpg",
+    "static/media/LogoMain.png": "/static/media/LogoMain.fd79ab65eb1140340727.png",
     "index.html": "/index.html",
-    "main.2e292da5.css.map": "/static/css/main.2e292da5.css.map",
-    "main.d7128d53.js.map": "/static/js/main.d7128d53.js.map",
+    "main.ee352be3.css.map": "/static/css/main.ee352be3.css.map",
+    "main.7e4f5343.js.map": "/static/js/main.7e4f5343.js.map",
     "787.fcba395d.chunk.js.map": "/static/js/787.fcba395d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e292da5.css",
-    "static/js/main.d7128d53.js"
+    "static/css/main.ee352be3.css",
+    "static/js/main.7e4f5343.js"
   ]
 }

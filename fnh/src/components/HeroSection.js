@@ -25,20 +25,6 @@ function HeroSection() {
     // Add other custom styles as needed
   };
   
-  const normalTextStyle = {
-    color: '#ffffff',
-    fontSize: '1.2rem',
-    // marginLeft:'20vh',
-    // textAlign: 'center',
-    // Add other custom styles as needed
-  };
-
-  const translucentBoxStyle = {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the color and opacity as needed
-    padding: '10px', // Add padding as needed
-    borderRadius: '8px', // Adjust the border radius as needed
-    marginLeft:'20vh',
-  };
 
   return (
     <div className='hero-container'>

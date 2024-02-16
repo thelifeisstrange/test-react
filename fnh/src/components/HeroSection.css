@@ -1,9 +1,22 @@
 .hero-container {
-  height: 100dvh;
+  height: 110vh; /* Default height for non-mobile devices */
   width: 100%;
   overflow: hidden;
   position: relative;
 }
+
+@media (max-width: 600px) {
+  .hero-container {
+    height: 70vh; /* Adjusted height for mobile devices */
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-container {
+    height: 70vh; /* Adjusted height for mobile devices */
+  }
+}
+
 
 .video-container {
   height: 100%;

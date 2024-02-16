@@ -67,7 +67,7 @@ const AppointmentsList = () => {
             <TableCell><b>Service Required</b></TableCell>
             <TableCell><b>Address</b></TableCell>
             <TableCell><b>Phone Number</b></TableCell>
-            <TableCell><b>Date Of Appointments</b></TableCell>
+            <TableCell><b>Date Of Appointment</b></TableCell>
             <TableCell><b>Number of Sessions</b></TableCell>
             <TableCell><b>Referral through</b></TableCell>
             <TableCell><b>Name of Therapist</b></TableCell>
@@ -98,7 +98,6 @@ const AppointmentsList = () => {
               <TableCell align="right">{appointment.numberofapp}</TableCell>
               <TableCell align="right">{appointment.referralthrough}</TableCell>
               <TableCell align="right">{appointment.nameoftherapist}</TableCell>
-              <TableCell align="right">{appointment.numberofapp}</TableCell>
               <TableCell align="right">{appointment.payment}</TableCell>
               <TableCell>
               <Button onClick={() => handleEditClick(appointment)}>Edit</Button>

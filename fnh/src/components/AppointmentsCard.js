@@ -11,7 +11,28 @@ import {
   InputLabel,
   Box,
   Button,
+  Alert,
+  Snackbar,
+  Slide
 } from '@mui/material';
+
+import { styled } from '@mui/system';
+
+const ResponsiveBox = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  @media (max-width: 600px) {
+    width: 360px;
+  }
+`;
 
 const AppointmentsCard = () => {
   useEffect(() => {
@@ -33,20 +54,43 @@ const AppointmentsCard = () => {
     phone: "",
   });
 
+  const [alert, setAlert] = useState(null);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    const { name, age, gender, address, service, phone } = formData;
+
+    // Check if all fields are filled
+    if (!name || !age || !gender || !address || !service || !phone) {
+      return false;
+    }
+
+    // Check if the phone number is valid
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phone.match(phoneRegex)) {
+      return false;
+    }
+
+  
+    return true;
+   
+  };
 
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (validateForm()) {
     axios.post("/aboutus", formData)
       .then((res) => {
         console.log(res);
+        setAlert({ type: 'success', message: 'Appointment booked successfully!' });
       })
       .catch((err) => {
         console.log(err);
+        setAlert({ type: 'error', message: 'Error submitting appointment. Please try again.' });
       });
       setFormData({
         name: "",
@@ -55,42 +99,39 @@ const AppointmentsCard = () => {
         address: "",
         service: "",
         phone: "",
-      })
-  }
+      });
+    } else {
+      setAlert({ type: 'error', message: 'Invalid form input. Please check your entries.' });
+    }
+  };
+
+  const closeAlert = () => {
+    setAlert(null);
+  };
 
   return (
-    <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column", // Stack elements vertically on smaller screens
-          width: "100%",
-          borderRadius: 2,
-          backgroundColor: "#f0f0f0",
-          marginTop: "35px",
-          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-          padding: "20px",
-        }}
-      >
+    <><div>
+      <ResponsiveBox>
         <Container maxWidth="sm"> {/* Limit width on larger screens */}
           <Typography variant="h6" color="text.primary" sx={{ marginBottom: 2, color: "#1f3557" }}>
             Book Your Appointment Now!
           </Typography>
           <Stack spacing={2}>
-            <TextField id="name" size="small" label="Name" variant="outlined" name="name" onChange={handleChange} value={formData.name} />
-            <TextField id="age" size="small" label="Age" type="number" InputProps={{ inputProps: { min: 1 } }} variant="outlined" name="age" onChange={handleChange} value={formData.age} />
+            <TextField id="name" size="small" label="Name" variant="outlined" name="name" required onChange={handleChange} value={formData.name} />
+            <TextField id="age" size="small" label="Age" type="number" required InputProps={{ inputProps: { min: 1 } }} variant="outlined" name="age" onChange={handleChange} value={formData.age} />
             <FormControl fullWidth size="small">
               <InputLabel id="lgender">Gender</InputLabel>
-              <Select labelId="lgender" id="gender" name="gender" label="Gender" onChange={handleChange} value={formData.gender}>
+              <Select labelId="lgender" id="gender" name="gender" label="Gender" required onChange={handleChange} value={formData.gender}>
                 <MenuItem value={"M"}>Male</MenuItem>
                 <MenuItem value={"F"}>Female</MenuItem>
               </Select>
             </FormControl>
-            <TextField id="address" label="Address" multiline rows={3} name="address" onChange={handleChange} value={formData.address} />
+            <TextField id="address" label="Address" multiline rows={3} name="address" required onChange={handleChange} value={formData.address} />
             <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
               <InputLabel id="lservice">Service Required</InputLabel>
-              <Select labelId="lservice" id="service" name="service" label="Service Required" onChange={handleChange} value={formData.service}>
+              <Select labelId="lservice" id="service" name="service" label="Service Required"  required onChange={handleChange} value={formData.service}>
                 <MenuItem value={"Physiotherapy"}>Physiotherapy</MenuItem>
+                <MenuItem value={"Coutomised Foot Insoles"}>Customised Foot Insoles</MenuItem>
                 <MenuItem value={"Psychology Consultation"}>Psychology Consultation</MenuItem>
                 <MenuItem value={"Diet Consultation"}>Diet Consultation</MenuItem>
                 <MenuItem value={"Gynecologist’s Consultation"}>Gynecologist’s Consultation</MenuItem>
@@ -103,7 +144,7 @@ const AppointmentsCard = () => {
                 <MenuItem value={"Telerehabilitation"}>Telerehabilitation</MenuItem>
               </Select>
             </FormControl>
-            <TextField id="phone" size="small" type="tel" label="Contact Number" variant="outlined" name="phone" onChange={handleChange} value={formData.phone} />
+            <TextField id="phone" size="small" type="tel" label="Contact Number" variant="outlined" required name="phone" onChange={handleChange} value={formData.phone} />
             <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
               <Button size="medium" variant="contained" color="primary" fullWidth onClick={handleSubmit}>
                 Start Your Rehab Now
@@ -111,7 +152,20 @@ const AppointmentsCard = () => {
             </Box>
           </Stack>
         </Container>
-      </Box>
+      </ResponsiveBox>
+      </div>
+      <Snackbar
+        open={Boolean(alert)}
+        autoHideDuration={6000}
+        onClose={closeAlert}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      >
+        <Slide in={Boolean(alert)} direction="down">
+          <Alert severity={alert?.type} onClose={closeAlert} sx={{ width: '100%', marginTop: 10 }}>
+            {alert?.message}
+          </Alert>
+        </Slide>
+      </Snackbar>
     </>
   );
 };

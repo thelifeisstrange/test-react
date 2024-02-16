@@ -9,15 +9,7 @@ const NursingCarePage = () => {
     textAlign: 'center',
     // Add other custom styles as needed
   };
-  
-  const subheadingStyle = {
-    color: '#1f3557',
-    fontSize: '1.8rem',
-    fontWeight: 'bold',
-    // textAlign: 'center',
-    // Add other custom styles as needed
-  };
-  
+    
   const normalTextStyle = {
     color: '#1f3557',
     fontSize: '1.2rem',

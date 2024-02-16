@@ -3,9 +3,6 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './pages/Home';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Services from './pages/Services';
-// import Products from './components/pages/Products';
-// import SignUp from './components/pages/SignUp';
 import PhysiotherapyPage from './components/PhysiotherapyPage'
 import PsycologyPage from './components/PsycologyPage'
 import DietPage from './components/DietPage';
@@ -19,7 +16,11 @@ import TelerehabPage from './components/TelerehabPage';
 import FootInsolePage from './components/FootInsolePage';
 import Login from './components/Login';
 import AppointmentsList from './components/AppointmentsList';
-// import Appointments from './components/Appointments';
+import PhysiotherapyCard from './servicescards/PhysiotherapyCard';
+import DietCard from './servicescards/DietCard';
+import GynecCard from './servicescards/GynecCard';
+
+
 
 
 function App() {
@@ -37,16 +38,16 @@ function App() {
               <Route path='/caretaker' element={<CaretakerPage />}/>  
               <Route path='/medicalequipments' element={<MedicalEquipments />}/>  
               <Route path='/diagnosticservices' element={<MedicalDiagnostics />}/>  
-              <Route path='/telerehabilitation' element={<TelerehabPage />}/>  
+              <Route path='/telere' element={<TelerehabPage />}/>  
               <Route path='/customisedfootinsoles' element={<FootInsolePage />}/>  
-
               <Route path='/support' element={<Login />}/>
-              <Route path = "/services" element={<Services />} />
-              {/* <Route path = "/adminpage" element={<Admin />} /> */}
               <Route path="/appointments" element={<AppointmentsList />} />
+              <Route path="/physiotherapycard" element={<PhysiotherapyCard />} />
+              <Route path="/dietcard" element={<DietCard />} />
+              <Route path="/gyneccard" element={<GynecCard />} />
+              
 
-
-            </Routes>  
+            </Routes> 
           </BrowserRouter>
   );
 }
