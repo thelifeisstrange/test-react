@@ -71,7 +71,7 @@ const CardSlider = () => {
         </p>
          
         <p style={{textAlign:'center',color: '#1f3557', fontSize: '1.2rem', marginBottom:'16px'}}>
-           &lt;  -- Click to View Description -- &gt; </p>    
+           &lt; - Click to View Description - &gt; </p>    
                  
     <Slider {...settings}>
     
