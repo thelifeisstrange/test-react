@@ -125,7 +125,7 @@ app.listen(5000, () => {
     console.log("Server Running On Port 5000");
 })
 
-mongoose.connect("mongodb+srv://faithnheal15:yKp8byXHBjPqrYig@faithdb.hjorm9j.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => console.log("Mongodb connected"))
 .catch((err) => console.log("Mongo Error", err));
 
