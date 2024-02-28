@@ -7,13 +7,13 @@
 
 @media (max-width: 600px) {
   .hero-container {
-    height: 90vh; /* Adjusted height for mobile devices */
+    height: 88vh; /* Adjusted height for mobile devices */
   }
 }
 
 @media (max-width: 400px) {
   .hero-container {
-    height: 90vh; /* Adjusted height for mobile devices */
+    height: 88vh; /* Adjusted height for mobile devices */
   }
 }
 

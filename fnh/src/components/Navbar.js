@@ -10,9 +10,9 @@ function Navbar() {
     
     <div>
       <div className='upperbar' style={{width:'100%', height:'5px', backgroundColor:'#1f3557'}}></div>
-      <div style={{ width:'100%', height:'70px', padding:'6px 20px'}}> 
-        <img src={roundlogo} alt='roundlogo' style={{height:'100%', marginLeft:'5px'}}/>
-        <img src={rectmainlogo} alt='Logo'style={{height:'100%'}} />
+      <div style={{ width:'100%', height:'80px', padding:'6px 15px', display:'flex'}}> 
+        <img src={roundlogo} alt='roundlogo' style={{height:'90%', marginLeft:'5px', marginTop:'5px'}}/>
+        <img src={rectmainlogo} alt='Logo'style={{height:'90%', marginTop:'5px'}} />
       </div>
     </div>
     

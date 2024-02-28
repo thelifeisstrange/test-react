@@ -30,7 +30,7 @@ const ResponsiveBox = styled(Box)`
   margin-bottom: 25px;
 
   @media (max-width: 600px) {
-    width: 360px;
+    width: 330px;
   }
 `;
 
