@@ -17,6 +17,10 @@ import {
 } from '@mui/material';
 
 import { styled } from '@mui/system';
+import { DatePicker} from "@mui/x-date-pickers";
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+
 
 const ResponsiveBox = styled(Box)`
   display: flex;
@@ -65,19 +69,16 @@ const AppointmentsCard = () => {
 
     // Check if all fields are filled
     if (!name || !age || !gender || !address || !service || !phone) {
-      return false;
+        return false;
     }
 
     // Check if the phone number is valid
     const phoneRegex = /^[0-9]{10}$/;
     if (!phone.match(phoneRegex)) {
-      return false;
+        return false;
     }
-
-  
     return true;
-   
-  };
+};
 
 
   async function handleSubmit(event) {
@@ -94,7 +95,7 @@ const AppointmentsCard = () => {
       });
       setFormData({
         name: "",
-        age: "",
+        age:"",
         gender: "",
         address: "",
         service: "",
@@ -109,6 +110,23 @@ const AppointmentsCard = () => {
     setAlert(null);
   };
 
+
+  // const [selectedDate, setSelectedDate] = useState(null);
+
+	// const Date = () => {
+	// 	const handleDateChange = (newValue) => {
+  //     console.log("New date selected:", newValue);
+  //     const formattedDate = newValue.toISOString().split('T')[0];
+  //     setFormData({ ...formData, dob: formattedDate });
+  //     setSelectedDate(newValue);
+  // };
+
+	// 	return <DatePicker label="Date Of Birth" sx={{ width: "100%" }} renderInput={(params) => <TextField {...params} />} value={selectedDate} onChange={handleDateChange} />;
+	// };
+
+
+  
+
   return (
     <><div>
       <ResponsiveBox>
@@ -118,8 +136,20 @@ const AppointmentsCard = () => {
           </Typography>
           <Stack spacing={2}>
             <TextField id="name" size="small" label="Name" variant="outlined" name="name" required onChange={handleChange} value={formData.name} />
-            <TextField id="age" size="small" label="Age" type="number" required InputProps={{ inputProps: { min: 1 } }} variant="outlined" name="age" onChange={handleChange} value={formData.age} />
+            <TextField id="age" size="small" label="Age" variant="outlined" name="age" required onChange={handleChange} value={formData.age} />
+            {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DatePicker />
+    </LocalizationProvider> */}
+    {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <Date />
+    </LocalizationProvider> */}
+    
+    
+          
+
+            
             <FormControl fullWidth size="small">
+            
               <InputLabel id="lgender">Gender</InputLabel>
               <Select labelId="lgender" id="gender" name="gender" label="Gender" required onChange={handleChange} value={formData.gender}>
                 <MenuItem value={"M"}>Male</MenuItem>
@@ -149,7 +179,11 @@ const AppointmentsCard = () => {
               <Button size="medium" variant="contained" color="primary" fullWidth onClick={handleSubmit}>
                 Start Your Rehab Now
               </Button>
+              
             </Box>
+            <Typography color="text.primary" sx={{ textAlign:'center',marginBottom: 2, color: "#1f3557" }}>
+            *gdpr compliance*
+          </Typography>
           </Stack>
         </Container>
       </ResponsiveBox>

@@ -69,9 +69,14 @@ const CardSlider = () => {
         <p style={headingStyle}>
         Our Services
         </p>
+
+        <div style={{display:"flex", justifyContent:"center"}}>
+        <button style={{textAlign:'center',color: '#ffffff', fontSize: '1.2rem', marginBottom:'16px', backgroundColor:"#126cc7", borderColor:"#126cc7", borderRadius:"5px", padding:5}}>
+        Click to View Description </button> 
+
+        </div>
          
-        <p style={{textAlign:'center',color: '#1f3557', fontSize: '1.2rem', marginBottom:'16px'}}>
-           &lt; - Click to View Description - &gt; </p>    
+           
                  
     <Slider {...settings}>
     

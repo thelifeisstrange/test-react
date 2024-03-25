@@ -2,9 +2,18 @@ require("dotenv").config();
 
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql2/promise');
+// const mysql = require('mysql2/promise');
 const {sendEmail} = require('./controllers/emailControllers.js');
-const mongoose = require('mongoose');
+
+
+//firebase
+
+const { doc, addDoc, collection, getDocs } = require('firebase/firestore');
+const { firedb } = require('./firebase.js');
+
+const firedbref = collection(firedb, 'faithnheal');
+
+
 
 
 const app = express();
@@ -12,12 +21,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors());
-const db = mysql.createPool({
-    host : "ls-29b37c8e6da88437a6afd34e7aa07751bed1f6dc.cnesccme20c5.ap-south-1.rds.amazonaws.com",
-    user: "suyash",
-    password : "faithandheal",
-    database : "faith"
-})
+
 
 // serve build folder as static
 app.use(express.static("build"));
@@ -37,29 +41,48 @@ app.get("/", (req, res) => {
 app.post("/aboutus", async (req, res) => {
   try {
     console.log(req.body);
-    const { name, age, gender, address, service, phone } = req.body;
+    const { name, age , gender, address, service, phone } = req.body;
 
     // Insert data into the appointments table
-    const sql =
-      "INSERT INTO appointments (name, age, gender, address, service, phone) VALUES(?,?,?,?,?,?)";
-    const values = [name, age, gender, address, service, phone];
-    await db.query(sql, values);
+    // const sql =
+    //   "INSERT INTO appointments (name, dob, gender, address, service, phone) VALUES(?,?,?,?,?,?)";
+    // const values = [name, dob, gender, address, service, phone];
+    // await db.query(sql, values);
 
     // Send email
     const msg = `New Appointment Request \n Name: ${name} \n Age: ${age} \n Gender: ${gender} \n Address: ${address} \n Service: ${service} \n Phone: ${phone}`;
-    sendEmail(msg);
+    // sendEmail(msg);
 
-    // Create a document in the Rehab collection
-    const rehabRequest = await Rehab.create({
-      name,
-      age,
-      gender,
-      address,
-      service,
-      phone,
-    });
+    
 
-    console.log("rehabRequest result", rehabRequest);
+
+    //firebase 
+    const addData = await addDoc(firedbref, { Name:name, Age:age , Gender:gender, Address:address, Service:service, Phone:phone })
+
+    if(addData){
+      console.log("Added Data to Firebase");
+      sendEmail(msg);
+
+    }
+    else{
+      console.log("Error while firebase adding");
+    }
+
+    // const values = [[name, age, gender, address, service, phone]];
+    //   const request = {
+    //     spreadsheetId: spreadsheetId,
+    //     range: range,
+    //     valueInputOption: 'USER_ENTERED',
+    //     resource: { values: values }
+    //   };
+
+    //   sheets.spreadsheets.values.append(request, (err, response) => {
+    //     if (err) {
+    //       console.error('Error adding data to Google Sheets:', err);
+    //     } else {
+    //       console.log('Data added to Google Sheets:', response.data);
+    //     }
+    //   });
 
     // Send a single response after both database operations
     return res.status(201).json({ msg: "success", data: { name, age, gender, address, service, phone } });
@@ -70,92 +93,52 @@ app.post("/aboutus", async (req, res) => {
 });
 
 
-app.post("/adminchange", async (req, res) => {
-  try {
-    const { id, name ,dateofapp, numberofapp, referralthrough, nameoftherapist , payment } = req.body;
-    const sql = "UPDATE appointments SET dateofapp=?, numberofapp=?, referralthrough=?, nameoftherapist=? ,payment=? WHERE id=?";
-    const values = [dateofapp, numberofapp, referralthrough , nameoftherapist , payment, id];
+// app.post("/adminchange", async (req, res) => {
+//   try {
+//     const { id, name, dateofapp, numberofapp, referralthrough, nameoftherapist, payment } = req.body;
 
-    await db.query(sql, values);
+//     // Update MySQL
+//     const sql = "UPDATE appointments SET dateofapp=?, numberofapp=?, referralthrough=?, nameoftherapist=?, payment=? WHERE id=?";
+//     const values = [dateofapp, numberofapp, referralthrough, nameoftherapist, payment, id];
+//     await db.query(sql, values);
 
-    const updatedAppointment = await db.query("SELECT * FROM appointments WHERE id=?", [id]);
+//     // Update Firestore
+//     const appointmentDocRef = doc(firedb, 'faithnheal', id);
+//     const updateData = {
+//       dateofapp,
+//       numberofapp,
+//       referralthrough,
+//       nameoftherapist,
+//       payment,
+//     };
+//     await updateDoc(appointmentDocRef, updateData);
 
-    // const msg = `Appointment Updated \n Name : ${name} \n ID: ${id} \n Date of Appointment: ${dateofapp} \n Number of Appointments: ${numberofapp} \n Payment: ${payment}`;
-    // sendEmail(msg);
+//     // Fetch the updated appointment from Firestore
+//     const updatedAppointmentSnapshot = await getDocs(collection(firedb, 'faithnheal'));
+//     const updatedAppointment = updatedAppointmentSnapshot.docs.map(doc => doc.data()).find(appointment => appointment.id === id);
 
-    res.json({ data: updatedAppointment[0][0] });
-  } catch (error) {
-    console.error("Error updating appointment:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-
-  
-});
+//     res.json({ data: updatedAppointment });
+//   } catch (error) {
+//     console.error("Error updating appointment:", error);
+//     res.status(500).json({ error: "Internal Server Error" });
+//   }
+// });
 
 
 app.get("/api/appointments", async (req, res) => {
-    try {
-      const result = await db.query("SELECT * FROM appointments");
-      res.json({ data: result[0] });
-    } catch (error) {
-      console.error("Error fetching appointments:", error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  });
+  try {
+    const appointmentsSnapshot = await getDocs(firedbref);
+    const appointments = appointmentsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    
+    res.json({ data: appointments });
+  } catch (error) {
+    console.error("Error fetching appointments:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
-  app.get("/api/mongotest", async (req, res) => {
-    try {
-      const allRehabRequest = await Rehab.find({});
-      const htm = `
-        <ul>
-          ${allRehabRequest
-            .map((rehab) => `<li>${rehab.name} - ${rehab.service}</li>`)
-            .join("")}
-        </ul>`;
-  
-      res.send(htm);
-    } catch (error) {
-      console.error("Error:", error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  });
   
 
 app.listen(5000, () => {
     console.log("Server Running On Port 5000");
 })
-
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => console.log("Mongodb connected"))
-.catch((err) => console.log("Mongo Error", err));
-
-
-const faithnhealSchema = new mongoose.Schema({
-  id : {
-    type : Number,
-  },
-  name : {
-    type : String,
-  },
-  age : {
-    type : String,
-  },
-  gender : {
-    type : String,
-  },
-  address : {
-    type : String,
-  },
-  service : {
-    type : String,
-  },
-  phone : {
-    type : String,
-  },
-
-},
-{
-  timestamps : true
-});
-
-const Rehab = mongoose.model('rehab', faithnhealSchema);
