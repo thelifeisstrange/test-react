@@ -53,9 +53,7 @@ app.post("/aboutus", async (req, res) => {
     const msg = `New Appointment Request \n Name: ${name} \n Age: ${age} \n Gender: ${gender} \n Address: ${address} \n Service: ${service} \n Phone: ${phone}`;
     // sendEmail(msg);
 
-    
-
-
+  
     //firebase 
     const addData = await addDoc(firedbref, { Name:name, Age:age , Gender:gender, Address:address, Service:service, Phone:phone })
 
@@ -63,10 +61,33 @@ app.post("/aboutus", async (req, res) => {
       console.log("Added Data to Firebase");
       sendEmail(msg);
 
-    }
-    else{
+      const sheetDbResponse = await fetch(process.env.SHEET_DB_API, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              'Name': name,
+              'Age': age,
+              'Gender': gender,
+              'Address': address,
+              'Service': service,
+              'Phone': phone,
+            }
+          ]
+        })
+      });
+
+      const sheetDbData = await sheetDbResponse.json();
+      console.log(sheetDbData);
+    } else {
       console.log("Error while firebase adding");
     }
+
+   
 
     // const values = [[name, age, gender, address, service, phone]];
     //   const request = {
