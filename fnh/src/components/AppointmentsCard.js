@@ -170,7 +170,7 @@ const AppointmentsCard = () => {
                 <MenuItem value={"Medical Diagnostic Services"}>Medical Diagnostic Services</MenuItem>
                 <MenuItem value={"Care taker at Home"}>Care taker at Home</MenuItem>
                 <MenuItem value={"Doctor’s Consultation"}>Doctor’s Consultation</MenuItem>
-                <MenuItem value={"Medical Equipment’s"}>Medical Equipment’s</MenuItem>
+                <MenuItem value={"Medical Equipments"}>Medical Equipment’s</MenuItem>
                 <MenuItem value={"Telerehabilitation"}>Telerehabilitation</MenuItem>
               </Select>
             </FormControl>
