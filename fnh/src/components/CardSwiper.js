@@ -71,8 +71,8 @@ const CardSlider = () => {
         </p>
 
         <div style={{display:"flex", justifyContent:"center"}}>
-        <button style={{textAlign:'center',color: '#ffffff', fontSize: '1.2rem', marginBottom:'16px', backgroundColor:"#126cc7", borderColor:"#126cc7", borderRadius:"5px", padding:5}}>
-        Click to View Description </button> 
+        {/* <button style={{textAlign:'center',color: '#ffffff', fontSize: '1.2rem', marginBottom:'16px', backgroundColor:"#126cc7", borderColor:"#126cc7", borderRadius:"5px", padding:5}}>
+        Click to View Description </button>  */}
 
         </div>
          

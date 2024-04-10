@@ -7,7 +7,7 @@ function Footer() {
 
   const instagramUrl = 'https://www.instagram.com/faith_n_heal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';
  
-    const phoneNumber = '7066323671'; // Replace with your phone number
+    const phoneNumber = '+91 7066323671'; // Replace with your phone number
   
     const handlePhoneClick = () => {
       window.location.href = `tel:${phoneNumber}`;
@@ -30,7 +30,7 @@ function Footer() {
             <Link to='/'>Our Vision</Link>
             <Link to='/'>Services</Link>            
             <Link to='/'>Testimonials</Link>
-            <Link to='/support'>Support</Link>
+            {/* <Link to='/support'>Support</Link> */}
           </div>
 
           <div className='footer-link-items'>
@@ -87,7 +87,7 @@ function Footer() {
         cursor: 'pointer'
       }}
     >
-      Instagram
+      faith_n_heal
     </a>
             </ul>
           </div>
@@ -101,49 +101,7 @@ function Footer() {
             </Link>
           </div>
           <small className='website-rights'>Faith N Heal ©2024</small>
-          <div className='social-icons'>
-            <Link
-              className='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
-              className='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i className='fab fa-instagram' />
-            </Link>
-            <Link
-              className='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i className='fab fa-youtube' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i className='fab fa-twitter' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
           </div>
-        </div>
       </section>
     </div>
   );

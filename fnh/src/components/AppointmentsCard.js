@@ -152,26 +152,26 @@ const AppointmentsCard = () => {
             
               <InputLabel id="lgender">Gender</InputLabel>
               <Select labelId="lgender" id="gender" name="gender" label="Gender" required onChange={handleChange} value={formData.gender}>
-                <MenuItem value={"M"}>Male</MenuItem>
-                <MenuItem value={"F"}>Female</MenuItem>
+                <MenuItem value={"Male"}>Male</MenuItem>
+                <MenuItem value={"Female"}>Female</MenuItem>
               </Select>
             </FormControl>
             <TextField id="address" label="Address" multiline rows={3} name="address" required onChange={handleChange} value={formData.address} />
             <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
               <InputLabel id="lservice">Service Required</InputLabel>
               <Select labelId="lservice" id="service" name="service" label="Service Required"  required onChange={handleChange} value={formData.service}>
-                <MenuItem value={"Physiotherapy"}>Physiotherapy</MenuItem>
+                <MenuItem value={"Physiotherapy Consultation"}>Physiotherapy Consultation</MenuItem>
                 <MenuItem value={"Coutomised Foot Insoles"}>Customised Foot Insoles</MenuItem>
-                <MenuItem value={"Psychology Consultation"}>Psychology Consultation</MenuItem>
-                <MenuItem value={"Diet Consultation"}>Diet Consultation</MenuItem>
-                <MenuItem value={"Gynecologist’s Consultation"}>Gynecologist’s Consultation</MenuItem>
-                <MenuItem value={"Ayurvedic Treatment"}>Ayurvedic Treatment</MenuItem>
-                <MenuItem value={"Nursing Care at Home"}>Nursing Care at Home</MenuItem>
-                <MenuItem value={"Medical Diagnostic Services"}>Medical Diagnostic Services</MenuItem>
+                <MenuItem value={"Nursing Care"}>Nursing Care</MenuItem>
                 <MenuItem value={"Care taker at Home"}>Care taker at Home</MenuItem>
-                <MenuItem value={"Doctor’s Consultation"}>Doctor’s Consultation</MenuItem>
+                <MenuItem value={"Psychologist's Consultation"}>Psychologist's Consultation</MenuItem>
+                <MenuItem value={"Gynecologist's Consultation"}>Gynecologist's Consultation</MenuItem>
+                <MenuItem value={"Doctor's Consultation"}>Doctor's Consultation</MenuItem>
+                <MenuItem value={"Diet Consultation"}>Diet Consultation</MenuItem>
+                <MenuItem value={"Ayurvedia Consultation"}>Ayurvedic Consultation</MenuItem>
+                <MenuItem value={"Medical Diagnostic Services"}>Medical Diagnostic Services</MenuItem>
                 <MenuItem value={"Medical Equipments"}>Medical Equipment’s</MenuItem>
-                <MenuItem value={"Telerehabilitation"}>Telerehabilitation</MenuItem>
+                <MenuItem value={"Tele-rehab"}>Tele-rehab(Online Consultation)</MenuItem>
               </Select>
             </FormControl>
             <TextField id="phone" size="small" type="tel" label="Contact Number" variant="outlined" required name="phone" onChange={handleChange} value={formData.phone} />

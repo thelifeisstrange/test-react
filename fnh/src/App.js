@@ -45,8 +45,6 @@ function App() {
               <Route path="/physiotherapycard" element={<PhysiotherapyCard />} />
               <Route path="/dietcard" element={<DietCard />} />
               <Route path="/gyneccard" element={<GynecCard />} />
-              
-
             </Routes> 
           </BrowserRouter>
   );

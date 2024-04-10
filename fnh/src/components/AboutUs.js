@@ -25,13 +25,13 @@ const AboutUs = () => {
         Faith n Heal Physiotherapy and Wellness Zone is a growing startup based on Home Health Care Services in and around Pune.
         </p>
         <p style={normalTextStyle}>            
-        Founder And Director :  Dr.Suyash Vanmore (PT)
+        Founder And Director :  Dr.Suyash Tukaram Vanmore (PT)
         </p>
-        <p style={normalTextStyle}>
+        {/* <p style={normalTextStyle}>
         We are a digital marketplace for health care services through our healthcare providers.
-        </p>
+        </p> */}
         <p style={normalTextStyle}>
-        We offer wide range of healthcare services including Physiotherapy, Psychology Consultation, Diet consultation, Nursing care at Home, Elderly Care, Tele-rehabilitation, Gynecologist's Consultation, Medical Diagnostic Services, Medical Equipments, Ayurvedic Treatment, Doctor's Consultation and Customized Foot Insoles.
+        We offer wide range of home healthcare services including Physiotherapy, Psychology Consultation, Diet consultation, Nursing care at Home, Elderly Care, Tele-rehabilitation, Gynecologist's Consultation, Medical Diagnostic Services, Medical Equipments, Ayurvedic Treatment, Doctor's Consultation and Customized Foot Insoles.
         </p>
         <p style={normalTextStyle}>
         Our aim is to deliver exceptional healthcare services at the comfort of your home.
